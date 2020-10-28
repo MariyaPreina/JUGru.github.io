@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body class="container">
+
+<!-- BANNER -->
+<div class="banner">
+    <div class="banner__left">
+        <div class="logo">
+            <svg class="logo__img">
+                <use xlink:href="img/sprite.svg#logo"></use>
+            </svg>
+        </div>
+
+        <h2 class="heading-2">Конференции, которые нужны</h2>
+        <div class="paragraph-wrap">
+            <p class="paragraph">Мы, JUG Ru Group, делаем крупнейшие конференции для программистов и сочувствующих.</p>
+            <p class="paragraph">С нас — крутая программа, топовые спикеры, технические доклады без воды.</p>
+            <p class="paragraph">С вас — готовность смотреть и общаться.</p>
+        </div>
+
+        <div class="button-bar">
+            <button class="btn btn--yellow" data-modal-target="#modal-subscribe">
+                <span class="button-emoji button-emoji--yellow">🙋‍♂️</span>
+                Купить билет
+            </button>
+
+            <button class="btn btn--black" data-modal-target="#modal-reject">
+                <span class="button-emoji">🤦‍♂️</span>
+                Послать в жопу
+            </button>
+        </div>
+    </div>
+
+    <div class="banner__right">
+        <div class="lines"></div>
+
+        <div class="image">
+            <img alt="background" class="background" src="img/background.png">
+        </div>
+    </div>
+</div>
+
+<!-- MODALS -->
+<div class="modal modal--white" id="modal-subscribe">
+    <form action="#" class="form form--white">
+        <div class="form__title form__title--white">
+            <span class="form__emoji">🙋‍♂️</span>
+            <h3 class="heading-3">Я хочу знать, когда будет офлайн</h3>
+        </div>
+
+        <div class="form__inner" id="modal-subscribe-inner">
+            <div class="form__group">
+                <input class="form__input" placeholder="Укажите email" required type="email">
+                <button class="form__submit" id="submitBtn" type="submit">Подписаться</button>
+            </div>
+            <p class="form__text">Нажимая на кнопку вы соглашаетесь на обработку <span class="underline">персональных данных</span>
+            </p>
+        </div>
+
+        <div class="form__respond" id="modal-subscribe-respond">
+            <div class="form__respond-img">
+                <svg class="form__respond-icon">
+                    <use xlink:href="img/sprite.svg#checked"></use>
+                </svg>
+            </div>
+            <p class="form__respond-text">Спасибо, что подписались на нашу рассылку!</p>
+        </div>
+    </form>
+
+    <button class="btn-backward" data-close-button>
+            <span class="btn-backward__img">
+                <svg class="btn-backward__icon">
+                    <use xlink:href="img/sprite.svg#back"></use>
+                </svg>
+            </span>
+        <span class="btn-backward__text" id="backward-sub">Я кликнул просто посмотреть</span>
+    </button>
+</div>
+
+
+<div class="modal modal--black" id="modal-reject">
+    <form action="#" class="form form--black">
+        <div class="form__content" id="modal-reject-content">
+            <div class="form__title form__title--black">
+                <span class="form__emoji">🤦‍♂</span>
+                <h3 class="heading-3 heading-3--white">Идите в жопу!</h3>
+            </div>
+
+            <div class="form__button-wrap">
+                <button class="form__btn" data-submit type="submit">Вы свои цены видели?</button>
+                <button class="form__btn" data-submit type="submit">Доклады ни о чем</button>
+                <button class="form__btn" data-submit type="submit">У вас там всё хорошо?</button>
+                <button class="form__btn" data-submit type="submit">Денег нет, но вы держитесь</button>
+            </div>
+        </div>
+
+        <div class="form__feedback" id="modal-reject-feedback">
+            <span class="form__feedback-emoji">👍</span>
+            <p class="form__feedback-text">Спасибо, что поделились!</p>
+        </div>
+    </form>
+
+    <button class="btn-backward" data-close-button>
+            <span class="btn-backward__img">
+                <svg class="btn-backward__icon">
+                    <use xlink:href="img/sprite.svg#back"></use>
+                </svg>
+            </span>
+        <span class="btn-backward__text" id="backward-rej">Я кликнул просто посмотреть</span>
+    </button>
+</div>
+
+<div id="overlay"></div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
