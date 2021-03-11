@@ -65,7 +65,7 @@ input:focus {
     height: 41px;
 }
 
-.heading-2 {
+.heading-1 {
     font-size: 50px;
     font-weight: 700;
     margin-bottom: 21px;
@@ -391,7 +391,7 @@ input:focus {
     margin-bottom: 82px;
 }
 
-.heading-3 {
+.modal__title {
     font-family: "Montserrat", sans-serif;
     font-size: 28px;
     font-weight: 600;
@@ -399,7 +399,7 @@ input:focus {
     color: #000;
 }
 
-.heading-3--white {
+.modal__title--white {
     color: #fff;
 }
 
